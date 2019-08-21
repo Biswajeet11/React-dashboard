@@ -1,0 +1,44 @@
+body{
+	background-image: url('./assets/Amazing-Background-Images-For-Websites-.jpg'); background-repeat: no-repeat;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+h3{
+	color: white
+}
+.navbar{
+	background-color: orange;
+	color: white;
+	text-align: center;
+
+}
+nav h1{
+	margin-left: 40%;
+	text-align: center;
+	display: block;
+	font-family: 'Pacifico', cursive;
+}
+.main-nav{
+	display: inline-block;
+	text-align: right;
+	width: calc(100% - 74px);
+}
+.main-nav .nav-items {
+	margin: 0;
+	padding: 0;
+}
+.main-nav a{
+	margin: 5px;
+	font-weight: bold;
+	color: black
+}
+.main-nav .nav-item {
+	display: inline-block;
+	margin: 0 16px;
+}
+
+.main-nav .nav-item a:hover,
+.main-nav .nav-item a:active {
+	color: white;
+}
