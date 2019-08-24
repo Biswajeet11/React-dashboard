@@ -13,11 +13,15 @@ h3{
 	text-align: center;
 
 }
-nav h1{
+.navbar h1{
 	margin-left: 40%;
 	text-align: center;
 	display: block;
 	font-family: 'Pacifico', cursive;
+	color: white;
+}
+.navbar h1 a{
+	color: white
 }
 .main-nav{
 	display: inline-block;

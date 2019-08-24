@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from '../config/Axios'
+
 class EditTable extends React.Component {
 	constructor(props) {
 		super(props)
@@ -14,6 +16,7 @@ class EditTable extends React.Component {
 		this.handleEdit = this.handleEdit.bind(this)
 		this.handleSave = this.handleSave.bind(this)
 	}
+
 	handleEdit() {
 		if (this.state.isEdit) {
 			this.setState({ isEdit: false })
@@ -38,9 +41,7 @@ class EditTable extends React.Component {
 	handleChange(e) {
 		this.setState({ [e.target.name]: e.target.value })
 	}
-	// handleCheckbox(e) {
 
-	// }
 
 	render() {
 		console.log(this.props)

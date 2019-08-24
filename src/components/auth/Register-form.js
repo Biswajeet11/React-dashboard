@@ -10,7 +10,7 @@ class RegisterForm extends React.Component {
 			username: '',
 			password: '',
 			errors: {},
-			sucess: ''
+			success: ''
 		}
 		this.handleChange = this.handleChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
@@ -25,7 +25,7 @@ class RegisterForm extends React.Component {
 		const registerData = {
 			email: this.state.email,
 			username: this.state.username,
-			password: this.state.password
+			password: this.state.password,
 		}
 		axios.post('/users/register', registerData)
 			.then((response) => {
@@ -35,11 +35,11 @@ class RegisterForm extends React.Component {
 					this.setState({ errors })
 				}
 				else {
-					const sucess = 'Registered successfully'
-					this.setState({sucess})
+					const success = 'Registered successfully'
+					this.setState({ success })
 				}
 			})
-			.catch(err=>console.log(err))
+			.catch(err => console.log(err))
 	}
 	render() {
 		return (
@@ -60,9 +60,9 @@ class RegisterForm extends React.Component {
 					<br />
 					<button type="submit" className="btn btn-info">Register</button>
 					{
-					!_.isEmpty(this.state.errors) && <FormError errors={this.state.errors} />
+						!_.isEmpty(this.state.errors) && <FormError errors={this.state.errors} />
 					}
-					{this.state.sucess &&	<h2>User Registered</h2>}
+					{this.state.success && <h2>User Registered</h2>}
 				</form>
 			</div>
 		)

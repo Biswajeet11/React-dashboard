@@ -8,6 +8,7 @@ import EditTable from './EditTable';
 import ProgressBar from './Progress-bar';
 import './table.css'
 import '../../App.css'
+import LineChart from '../charts/Line-chart';
 
 
 class CustomerList extends React.Component {
@@ -32,8 +33,7 @@ class CustomerList extends React.Component {
 				const customers = response.data
 				this.setState({ customers, isLoading: false })
 				return customers
-			}
-			)
+			})
 			.catch(err => console.log(err))
 	}
 
@@ -60,7 +60,6 @@ class CustomerList extends React.Component {
 
 		if (this.state.customers.length) {
 			this.setState({ customers })
-
 		}
 		else {
 			console.log(`${customers}......`)
@@ -69,8 +68,11 @@ class CustomerList extends React.Component {
 	}
 
 	render() {
+
+		console.log('customer localStorage', localStorage)
 		return (
 			<div>
+
 				<br />
 				<SearchBox handleChange={this.handleChange} />
 				<br />
@@ -101,9 +103,11 @@ class CustomerList extends React.Component {
 						</div>
 					)}
 				<br />
+
 				<Link to="/customers/new"><button className="btn-sm btn-danger">Add Customer</button></Link>
 				<br />
 
+				<LineChart />
 			</div>
 		)
 	}

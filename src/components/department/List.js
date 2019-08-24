@@ -1,11 +1,11 @@
-import React from 'react'
-import _ from 'lodash'
+import React from 'react';
+import _ from 'lodash';
 
-import axios from '../config/Axios'
-import DepartmentForm from './Form'
+import axios from '../config/Axios';
+import DepartmentForm from './Form';
 import FormError from '../common/FormError';
 import SearchBox from '../common/Search-box';
-import './department.css'
+import './department.css';
 
 class DepartmentList extends React.Component {
 	constructor() {

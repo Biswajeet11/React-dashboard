@@ -3,6 +3,7 @@ import _ from 'lodash'
 import FormError from '../common/FormError';
 import axios from '../config/Axios'
 import CustomerForm from './Form';
+
 class CustomerNew extends React.Component {
 	constructor() {
 		super()
@@ -23,6 +24,7 @@ class CustomerNew extends React.Component {
 					this.setState({ errors })
 				}
 				else {
+					console.log(this.props.history)
 					this.props.history.push('/customers')
 				}
 			})
@@ -37,6 +39,7 @@ class CustomerNew extends React.Component {
 					!_.isEmpty(this.state.errors) && <FormError errors={this.state.errors} />
 				}
 				<CustomerForm handleSubmit={this.handleSubmit} />
+			
 			</div>
 		)
 	}

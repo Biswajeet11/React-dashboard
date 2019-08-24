@@ -13,6 +13,7 @@ class SearchBox extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault()
 	}
+	
 	handleChange(e) {
 		e.preventDefault()
 		const text = e.target.value
